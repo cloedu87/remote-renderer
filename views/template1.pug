@@ -1,0 +1,12 @@
+doctype html
+html(lang="en")
+  head
+    title= templateId
+    script(type='text/javascript').
+      if (foo) bar(1 + 5)
+  body
+    h1 Pug - node template engine - template
+    #container.col
+      span= message
+      span= templateId
+      span= queryParam1
