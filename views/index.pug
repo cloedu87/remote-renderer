@@ -13,7 +13,7 @@ html(lang="en")
       async function applyTemplate() {
         const template = await axios({
           method: 'get',
-          url: 'http://localhost:3000/template/template1?param1=this-is-a-clientside-variable',
+          url: '/template/template1?param1=this-is-a-clientside-variable',
         });
 
         console.log(template.data)
