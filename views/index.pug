@@ -20,6 +20,93 @@ html(lang="en")
 
         document.getElementById('templateContainer').innerHTML = template.data
       }
+    style(type='text/css').
+      div.table-2 {
+        max-width: 800px;
+        margin-top: 36px; 
+        margin-bottom: 36px;
+        position:relative; 
+      }
+
+      div.table-container-2 {
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-width: 800px;
+      }
+
+      h3 {
+        font-size: 26px; line-height: 30px;
+        margin: 0 0 12px -1px;
+        max-width: 800px;
+        font-family: 'Roboto'; font-style: normal; font-weight: 300;
+        letter-spacing: 0.01rem; word-spacing: 0.025rem; 
+        color: rgba(0,0,0,1); 
+        margin-left: -1px;
+      }
+
+      div.table-caption {
+        font-size: 13px; line-height: 17px;
+        font-family: 'Roboto'; font-style: normal; font-weight: 400;
+        line-height: 18px;
+        margin: 8px 0 42px;
+        max-width: 470px; 
+        width: calc(100% - 100px);
+      }
+
+      div.sliding-nav-top {
+        position:absolute; 
+        display:none; 
+        white-space:nowrap; 
+        right:0; 
+        top:0; 
+      }
+
+      div.sliding-nav-bottom {
+        position:absolute; 
+        white-space:nowrap; 
+        bottom:0; 
+        right:0; 
+        display:none; 
+      }
+
+      table.type-2 {
+        width:100%; 
+        margin-bottom: 15px; 
+        max-width: 800px;
+      }
+
+      @media screen and (max-width: 1119px) {
+        h3 {
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 28px;
+          margin: -3px 0 12px -1px;
+          margin-left: 0px;
+        }
+
+        div.table-2 > h3 {
+          width: 70%;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        h3 {
+          font-weight: 300;
+          font-size: 21px;
+          line-height: 25px;
+          margin: -2px 0 12px 0px;
+          margin-left: 0px;
+        }
+
+        div.sliding-nav-top {
+          display:block; 
+        }
+
+        div.sliding-nav-bottom {
+          display:block; 
+        }
+      }
+
   body
     div.bg-dark.text-secondary.px-4.py-5.text-center
       div.py-5
@@ -29,6 +116,6 @@ html(lang="en")
             | use the button below to <code>pre-render</code> a <code>pug-template</code> with defined variables right out in the cloud, and see it appear below.
           div.d-grid.gap-2.d-sm-flex.justify-content-sm-center
             button.btn.btn-outline-info.btn-lg.px-4.me-sm-3.fw-bold(type='button' onclick='applyTemplate()') click me
-          div#templateContainer.py-5
-
-    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8' crossorigin='anonymous')
+    div.bg-light.text-secondary.px-4.py-5.text-center
+      div.col-lg-6.mx-auto
+        div#templateContainer
