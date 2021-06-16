@@ -27,7 +27,6 @@ export class AppController {
     const compiledTemplateFunction = pug.compile(
       `
 .table-2.sgx
-  .sliding-nav-top
   h3 Dies ist eine hervorragende &Uuml;berschrift
   .table-container-2
     table.type-2
@@ -51,7 +50,8 @@ export class AppController {
       message: 'Hi there!',
       templateId: params.templateId,
       queryParam: queryParam,
-      // this are the variables and data we use in the template above
+      // this are the variables and data we use in the template above.
+      // could also be administrated together with the template above, in a admin-ui and a database
       headers: ['Beschreibung', 'Spalte 1', 'Spalte 2', 'Spalte 3', 'Spalte 4'],
       columns: [
         {
